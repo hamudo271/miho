@@ -9,18 +9,18 @@ export default function PromisesSection() {
   const swiperRef = useRef<Swiper | null>(null);
 
   const branches = [
-    { name: '미호 강남본점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/gangnam.jpg' },
-    { name: '미호 강동천호점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/gangdong_cheonho.jpg' },
-    { name: '미호 강서점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/gangseo.jpg' },
-    { name: '미호 건대점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/kunkuk_university.jpg' },
-    { name: '미호 광주점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/gwangju_sangmu.jpg' },
-    { name: '미호 구리점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/guri.jpg' },
-    { name: '미호 노원점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/nowon.jpg' },
-    { name: '미호 명동점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/myeongdong.jpg' },
-    { name: '미호 목동점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/mogdong.jpg' },
-    { name: '미호 미아사거리점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/miasageoli.jpg' },
-    { name: '미호 부산서면점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/busan_seomyeon.jpg' },
-    { name: '미호 부천점', image: 'https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/bucheon.jpg' },
+    { name: '미호 강남본점', image: 'https://placehold.co/300x400?text=Gangnam' },
+    { name: '미호 강동천호점', image: 'https://placehold.co/300x400?text=Gangdong' },
+    { name: '미호 강서점', image: 'https://placehold.co/300x400?text=Gangseo' },
+    { name: '미호 건대점', image: 'https://placehold.co/300x400?text=Konkuk' },
+    { name: '미호 광주점', image: 'https://placehold.co/300x400?text=Gwangju' },
+    { name: '미호 구리점', image: 'https://placehold.co/300x400?text=Guri' },
+    { name: '미호 노원점', image: 'https://placehold.co/300x400?text=Nowon' },
+    { name: '미호 명동점', image: 'https://placehold.co/300x400?text=Myeongdong' },
+    { name: '미호 목동점', image: 'https://placehold.co/300x400?text=Mokdong' },
+    { name: '미호 미아사거리점', image: 'https://placehold.co/300x400?text=Mia' },
+    { name: '미호 부산서면점', image: 'https://placehold.co/300x400?text=Busan' },
+    { name: '미호 부천점', image: 'https://placehold.co/300x400?text=Bucheon' },
   ];
 
   useEffect(() => {
@@ -74,13 +74,10 @@ export default function PromisesSection() {
               muted
               loop
               playsInline
-              poster="https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/video_poster.png"
+              poster="https://placehold.co/1920x1080?text=Video+Poster"
               className="w-full h-full object-cover"
             >
-              <source
-                src="https://vgzol4tn11543.edge.naverncp.com/toxnfill/imges/brand/samjung/video1.mp4"
-                type="video/mp4"
-              />
+              {/* <source src="..." type="video/mp4" /> */}
             </video>
           </div>
         </div>

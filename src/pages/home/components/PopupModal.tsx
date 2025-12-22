@@ -15,28 +15,28 @@ export default function PopupModal({ onClose }: PopupModalProps) {
   const popups = [
     {
       title: 'MERRY MIHO-MAS!',
-      image: 'https://intranet.bbgnetworks.com/uploadFiles/T00060/mainImg/20251215110127_16.jpg',
-      link: 'https://www.toxnfill.com/brandEventView.php?gubun=1&idx=32416&pno=1',
+      image: 'https://placehold.co/600x800?text=MERRY+MIHO-MAS',
+      link: '#',
     },
     {
       title: '신논현점 VIP ZONE',
-      image: 'https://intranet.bbgnetworks.com/uploadFiles/T00060/mainImg/20251103170548_36.jpg',
-      link: '',
+      image: 'https://placehold.co/600x800?text=VIP+ZONE',
+      link: '#',
     },
     {
       title: '카데바 워크숍',
-      image: 'https://intranet.bbgnetworks.com/uploadFiles/T00060/mainImg/20251027183544_13.jpg',
-      link: '',
+      image: 'https://placehold.co/600x800?text=Workshop',
+      link: '#',
     },
     {
       title: '써마지 마스터 클래스',
-      image: 'https://intranet.bbgnetworks.com/uploadFiles/T00060/mainImg/20250915080040_15.jpg',
-      link: '',
+      image: 'https://placehold.co/600x800?text=Thermage',
+      link: '#',
     },
     {
       title: '미호 브로우',
-      image: 'https://intranet.bbgnetworks.com/uploadFiles/T00060/mainImg/20250411080032_11.jpg',
-      link: 'https://www.toxnfillbrow.com/',
+      image: 'https://placehold.co/600x800?text=MIHO+BROW',
+      link: '#',
     },
   ];
 

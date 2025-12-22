@@ -3,14 +3,14 @@ export default function BusinessSection() {
     {
       title: 'COSMETICS',
       desc: '미호의 노하우를 담은 코스메틱',
-      image: 'https://www.toxnfill.com/imges/brand/icon/2025/cosmetics.jpg',
-      link: 'http://www.bbglab.co.kr/index.html',
+      image: 'https://placehold.co/600x400?text=COSMETICS',
+      link: '#',
     },
     {
       title: 'BROW',
       desc: '4년 연속 국내 1위! 100% 책임 시술제',
-      image: 'https://www.toxnfill.com/imges/brand/icon/2025/brow.jpg',
-      link: 'https://www.toxnfillbrow.com/',
+      image: 'https://placehold.co/600x400?text=BROW',
+      link: '#',
     },
   ];
 

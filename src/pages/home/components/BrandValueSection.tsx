@@ -104,7 +104,7 @@ export default function BrandValueSection() {
         <div className="grid grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
-              src="https://www.toxnfill.com/imges/brand/korea_map.png"
+              src="https://placehold.co/800x600?text=Map"
               alt="전국 지점 지도"
               className="w-full"
             />

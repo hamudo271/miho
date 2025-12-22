@@ -18,50 +18,40 @@ export default function Footer() {
               className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <strong className="whitespace-nowrap">가맹점 모집</strong>
-              <img
-                src="https://www.toxnfill.com/imges/renew/ico-ft-arrow.png"
-                alt=""
-                className="w-4 h-4"
-              />
+              <i className="ri-arrow-right-s-line text-lg"></i>
             </a>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex gap-4">
             <a
-              href="https://blog.naver.com/toxnfill"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              className="w-10 h-10 rounded-full  flex items-center justify-center transition-opacity"
             >
-              <img
-                src="https://www.toxnfill.com/imges/icon/ft_sns_blog.png"
-                alt="Blog"
-                className="w-8 h-8"
-              />
+              <i className="ri-blog-fill text-2xl text-gray-400"></i>
             </a>
             <a
-              href="https://www.instagram.com/toxnfill_official/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-opacity"
             >
-              <img
-                src="https://www.toxnfill.com/imges/icon/ft_sns_insta.png"
-                alt="Instagram"
-                className="w-8 h-8"
-              />
+              <i className="ri-instagram-line text-2xl text-gray-400"></i>
             </a>
             <a
-              href="https://www.youtube.com/channel/UCFpFZkm7mclD-z_-j7FTUag"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-opacity"
             >
-              <img
-                src="https://www.toxnfill.com/imges/icon/ft_sns_youtube.png"
-                alt="YouTube"
-                className="w-8 h-8"
-              />
+              <i className="ri-youtube-fill text-2xl text-gray-400"></i>
+            </a>
+            <a
+              href="#"
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-opacity"
+            >
+              <i className="ri-kakao-talk-fill text-2xl text-gray-400"></i>
             </a>
           </div>
         </div>

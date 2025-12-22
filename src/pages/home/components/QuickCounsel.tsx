@@ -272,7 +272,7 @@ export default function QuickCounsel() {
                       <span className="text-primary">[필수]</span> 서비스 이용 및 예약 신청을 위한
                       개인정보 제공에 동의{' '}
                       <a
-                        href="https://www.toxnfill.com/brandAcceptSite.php"
+                        href="#"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary underline cursor-pointer"
@@ -294,7 +294,7 @@ export default function QuickCounsel() {
                     <span className="text-sm">
                       <span className="text-gray-500">[선택]</span> 마케팅 활용에 대한 동의{' '}
                       <a
-                        href="https://www.toxnfill.com/brandAcceptPrivacy.php"
+                        href="#"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary underline cursor-pointer"
