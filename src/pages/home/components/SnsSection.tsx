@@ -9,41 +9,29 @@ export default function SnsSection() {
 
         <div className="grid grid-cols-2 gap-8">
           <a
-            href="/brandToxVideo.php"
+            href="#"
             className="relative aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer"
           >
-            <img
-              src="https://www.toxnfill.com/imges/renew/sns_youtube_bg.png"
-              alt="YouTube"
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <i className="ri-youtube-fill text-6xl text-gray-400"></i>
+            </div>
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all flex flex-col items-center justify-center">
-              <img
-                src="https://www.toxnfill.com/imges/renew/ico_youtube.png"
-                alt="YouTube"
-                className="w-20 h-20 mb-4"
-              />
+              <i className="ri-youtube-line text-6xl text-white mb-4"></i>
               <p className="text-white text-2xl font-bold">YOUTUBE</p>
             </div>
           </a>
 
           <a
-            href="https://www.instagram.com/toxnfill_official/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="relative aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer"
           >
-            <img
-              src="https://www.toxnfill.com/imges/renew/sns_insta_bg.png"
-              alt="Instagram"
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <i className="ri-instagram-fill text-6xl text-gray-400"></i>
+            </div>
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all flex flex-col items-center justify-center">
-              <img
-                src="https://www.toxnfill.com/imges/renew/ico_insta.png"
-                alt="Instagram"
-                className="w-20 h-20 mb-4"
-              />
+              <i className="ri-instagram-line text-6xl text-white mb-4"></i>
               <p className="text-white text-2xl font-bold">INSTAGRAM</p>
             </div>
           </a>

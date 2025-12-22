@@ -108,18 +108,14 @@ export default function Header({ isScrolled }: HeaderProps) {
             <nav className="flex items-center gap-8">
               <div className="flex items-center gap-6 text-sm">
                 <a
-                  href="http://www.bbglab.co.kr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className={`hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
                     }`}
                 >
                   미호 코스메틱
                 </a>
                 <a
-                  href="https://www.bbgnetworks.com/recruitment"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className={`hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
                     }`}
                 >

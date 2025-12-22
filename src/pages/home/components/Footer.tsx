@@ -12,9 +12,7 @@ export default function Footer() {
               className="h-8"
             />
             <a
-              href="https://www.bbgnetworks.com/recruitment"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <strong className="whitespace-nowrap">가맹점 모집</strong>
@@ -61,18 +59,14 @@ export default function Footer() {
             <div>
               <div className="flex gap-4 mb-4 text-sm">
                 <a
-                  href="/brandAcceptSite.php"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   사이트이용약관
                 </a>
                 <span>|</span>
                 <a
-                  href="/brandAcceptPrivacy.php"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   개인정보처리방침
