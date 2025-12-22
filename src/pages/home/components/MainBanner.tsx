@@ -9,42 +9,44 @@ import 'swiper/css/navigation';
 const slides = [
   {
     id: 1,
-    image: '/images/banner_slide_1.png',
-    mobileImage: '/images/banner_slide_1.png',
+    image: '/miho/images/banner_slide_1.png',
+    mobileImage: '/miho/images/banner_slide_1.png',
     title: '세포가 젊어지는 리프팅',
+    subtitle: '미호 리프팅',
+    description: '피부 속부터 차오르는 탄력',
     link: '#treatments'
   },
   {
     id: 2,
-    image: '/images/banner_slide_2.png',
-    mobileImage: '/images/banner_slide_2.png',
+    image: '/miho/images/banner_slide_2.png',
+    mobileImage: '/miho/images/banner_slide_2.png',
     title: '리즈셀 리프팅',
-    subtitle: '스킨웨이브 플래님과 셀리프팅의 시너지 에디션',
-    description: '개개인의 피부 저항값에 따른 최적의 시술 플래닝 안티에이징·피부장벽강화·얼굴라인 개선을 한번에!',
+    subtitle: '프리미엄 리프팅',
+    description: '당신의 리즈 시절을 되찾아드립니다',
     link: '#treatments/lizcell'
   },
   {
     id: 3,
-    image: '/images/banner_slide_5.png', // Celltracol
-    mobileImage: '/images/banner_slide_5.png',
+    image: '/miho/images/banner_slide_5.png', // Celltracol
+    mobileImage: '/miho/images/banner_slide_5.png',
     title: '셀트라콜',
-    subtitle: '피부 재생력을 끌어오리는 강력한 스킨부스터',
-    description: '일반PDO실 1427개를 주입한 효과 셀팅만의 베네핏과 울크라콜의 강력한 시너지',
+    subtitle: '콜라겐 생성 촉진',
+    description: '자연스러운 볼륨감 완성',
     link: '#treatments/celltracol'
   },
   {
     id: 4,
-    image: '/images/banner_slide_3.png', // Stem Cell
-    mobileImage: '/images/banner_slide_3.png',
+    image: '/miho/images/banner_slide_3.png', // Stem Cell
+    mobileImage: '/miho/images/banner_slide_3.png',
     title: '미호 줄기세포',
-    subtitle: '피부 속 깊은 곳에서 시작되는 차원이 다른 변화의 경험',
-    description: '피부와 신체 내부의 세포 재생 촉진, 손상된 조직과 노화된 피부의 집중 개선',
+    subtitle: '근본적인 피부 개선',
+    description: '건강한 아름다움의 시작',
     link: '#treatments/stemcell'
   },
   {
     id: 5,
-    image: '/images/banner_slide_4.png', // CEO
-    mobileImage: '/images/banner_slide_4.png',
+    image: '/miho/images/banner_slide_4.png', // CEO
+    mobileImage: '/miho/images/banner_slide_4.png',
     title: '리즈셀 CEO 패키지',
     subtitle: '성공하는 리더를 위한 프리미엄 리프팅 솔루션',
     description: '바쁜 리더들의 소중한 시간, 다운타임 없는 최적의 피부 솔루션',

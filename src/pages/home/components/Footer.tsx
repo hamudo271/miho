@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex items-start justify-between mb-8">
           <div className="flex items-start gap-12">
             <img
-              src="/logo_w.svg"
+              src="/miho/logo_w.svg"
               alt="미호"
               className="h-8"
             />

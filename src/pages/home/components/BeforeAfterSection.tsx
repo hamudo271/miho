@@ -3,7 +3,7 @@ export default function BeforeAfterSection() {
     <section
       className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: 'url(/images/before_after_bg.png)',
+        backgroundImage: 'url(/miho/images/before_after_bg.png)',
       }}
     >
       <div className="absolute inset-0 bg-black/40"></div>

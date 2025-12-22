@@ -97,8 +97,8 @@ export default function Header({ isScrolled }: HeaderProps) {
               <img
                 src={
                   isDarkInfo
-                    ? '/logo.svg'
-                    : '/logo_w.svg'
+                    ? '/miho/logo.svg'
+                    : '/miho/logo_w.svg'
                 }
                 alt="미호"
                 className="h-8"

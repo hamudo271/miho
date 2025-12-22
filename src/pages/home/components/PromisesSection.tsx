@@ -52,7 +52,7 @@ export default function PromisesSection() {
         <div className="grid grid-cols-2 gap-16 items-center mb-20">
           <div className="text-white">
             <img
-              src="/logo_w.svg"
+              src="/miho/logo_w.svg"
               alt="MIOHO"
               className="h-12 mb-8"
             />
