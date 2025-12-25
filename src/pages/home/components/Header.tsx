@@ -165,13 +165,16 @@ export default function Header({ isScrolled }: HeaderProps) {
               {menuItems.map((item, index) => (
                 <li
                   key={index}
-                  className="relative group"
+                  className="relative group h-full flex items-center"
                 >
                   <button
                     className={`text-sm font-medium hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer py-4 ${isDarkInfo ? 'text-gray-800' : 'text-white'
                       }`}
                   >
-                    {item.title}
+                    <span className="relative">
+                      {item.title}
+                      <span className={`absolute -bottom-1 left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full ${isDarkInfo ? 'bg-gray-800' : 'bg-white'}`}></span>
+                    </span>
                   </button>
                 </li>
               ))}
