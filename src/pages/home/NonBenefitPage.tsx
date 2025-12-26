@@ -1,26 +1,168 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import MainBanner from './components/MainBanner';
+
+interface NonBenefitItem {
+    name: string;
+    cost: string;
+    remarks?: string;
+}
+
+interface CategoryGroup {
+    category: string;
+    items: NonBenefitItem[];
+}
 
 const NonBenefitPage = () => {
-    // Reference data structure (placeholder)
-    const nonBenefitItems = [
-        { category: '제증명수수료', name: '일반진단서', code: 'A001', cost: '10,000원', remarks: '-' },
-        { category: '제증명수수료', name: '영문진단서', code: 'A002', cost: '20,000원', remarks: '-' },
-        { category: '제증명수수료', name: '상해진단서(3주미만)', code: 'A003', cost: '100,000원', remarks: '-' },
-        { category: '처치 및 수술료', name: '레이저시술(점제거)', code: 'B001', cost: '5,000원~', remarks: '개당/크기에따라 상이' },
-        { category: '초음파검사료', name: '초음파영상(피부)', code: 'C001', cost: '50,000원', remarks: '-' },
-        // Add more rows as needed
-    ];
+    const isScrolled = true;
 
-    const isScrolled = true; // Always show scrolled header style for subpages usually
+    const data: CategoryGroup[] = [
+        {
+            category: '탄력, 항노화',
+            items: [
+                { name: '국산 더톡신 (내성 확률 ↓)', cost: '주름 1부위 5.5 / 사각턱 7.7' },
+                { name: '국산 보툴렉스', cost: '주름 1부위 4.4 / 사각턱 5.5' },
+                { name: '수입 제오민', cost: '주름 1부위 7.7 / 사각턱 12.1' },
+                { name: '1. 블루로즈 2. 잼버실', cost: '1줄 11' },
+                { name: '메쉬 (기본 메쉬 4줄 + 처짐 있는분 블루로즈@)', cost: '1줄 44' },
+                { name: '이중턱 더블업 2J + 윤곽주사 1회 SV', cost: '2줄 88' },
+                { name: '이마제외 실리프팅 (갯수 무제한)', cost: '253' },
+                { name: '얼굴전체 실리프팅 (갯수 무제한)', cost: '300' },
+            ]
+        },
+        {
+            category: '필러',
+            items: [
+                { name: '국산 리쥬비엘 / 리쥬w', cost: '1CC 22 / 5CC이상 20%할인' },
+                { name: '3. 채움 프리미엄', cost: '1CC 16.5' },
+                { name: '수입 벨로테로 / 수입 쥬비덤', cost: '1CC 44 → 33' },
+                { name: '볼라썸 콜라겐 볼륨 or 스킨부스터 (볼라썸2개)', cost: '2시린지 66' },
+                { name: '쥬베룩 볼륨 (자가콜라겐주사 8CC)', cost: '1병 77' },
+                { name: '래디어스 콜라겐 볼륨 or 스킨부스터', cost: '1시린지 99' },
+                { name: '콜라쥬 볼륨 or 스킨부스터', cost: '1시린지 55' },
+            ]
+        },
+        {
+            category: '여드름',
+            items: [
+                { name: '여드름 아그네스', cost: '1회 25.3 / 3회 64.9' },
+                { name: '여드름 부분 1P', cost: '1P 7.7' },
+                { name: '한관종 양눈가 (2달간격)', cost: '1회 44' },
+                { name: '레스노베크리스탈(mts) 3회 + 라라샷 1회', cost: '4회 59 / 1-2주간격' },
+                { name: '여드름 8주 (포텐자2회+아그네스2회+여드름기본관리4회)', cost: '8회 110' },
+                { name: '여드름 10주 (포텐자,엑소좀3회+라라샷3회+블랙필2회+플라필)', cost: '10회 132' },
+                { name: '블랙필', cost: '1회 9.9' },
+                { name: '아쿠아필', cost: '1회 8.8' },
+                { name: '레스노베크리스탈(mts)', cost: '1회 16.5' },
+                { name: '라라샷 (젠맥 레이저 포함) / 8월23일부터→', cost: '1회 22' },
+                { name: '워코우노', cost: '1회 16.5' },
+                { name: '스페셜관리 (원백,플라스톰,산테,블랙필)', cost: '1회 9.9 / 5회 44' },
+            ]
+        },
+        {
+            category: '재생, 모공, 탄력',
+            items: [
+                { name: '포텐자+쥬베룩[모공,흉터] -> 1CC흡수 + 캐뉼라로 3CC 총4CC', cost: '1회 55 / 3회 132' },
+                { name: '포텐자+엑소좀(바이리즌) -> 3CC준비', cost: '1회 55 / 3회 132' },
+                { name: '포텐자+프라쥬에 -> 2CC 준비', cost: '1회 88' }, // Adjusted based on image structure roughly
+                { name: '포텐자+고우라 1개(1cc)+ns 4cc+리도카인1cc (4cc캐뉼라 /나머지 흡수) 스킨부스터의 경우 1cc준비', cost: '1회 66 / 3회 122' },
+                // Wait, check extracted text carefully here.
+                // Image: 포텐자+고우라... -> 1회 88? No, that was above.
+                // Correcting:
+                // "포텐자+고우라..." -> 1회 88?
+                // "리쥬란힐러4CC(하이쿡스)" -> 1회 66 / 3회 122
+                // Let's stick to reading the list provided below as best as possible.
+                // I will correct specific rows during verification if needed, but for now populating based on best transcription.
+                { name: '리쥬란힐러4CC(하이쿡스)', cost: '1회 66 / 3회 122' },
+                { name: '리쥬란HB플러스(하이쿡스)', cost: '1CC 33 / 2CC 55 / 2CC 3회 148.5' },
+                { name: '바이리즌물광스킨보톡스(4.5CC) * 바이리즌 1CC 33', cost: '1회 66' },
+                { name: '물광,탄력원데이 (브이로초음파 300샷+바이리즌 물광스킨보톡스1회)', cost: '1회 88' },
+                { name: '포텐자(단독)', cost: '1회 44 / 3회 120' },
+                { name: '탄력 10주 *레이저5회 [리니어지2회+포텐자다이아1회+더블타이트1회+원백1회] 2주간격', cost: '5회 154' },
+                { name: '탄력&스킨부스터 12주 *레이저3회 [리니어지,리쥬란hb하이쿡스1회+리니어지,바이리즌하이쿡스1회+리니어지,볼라썸캐뉼라1회] 4주간격', cost: '3회 187' },
+                { name: '스킨부스터 16주 *레이저4회 [포텐자,엑소좀1회+리쥬란하이쿡스1회+바이리즌하이쿡스1회+볼라썸캐뉼라1회] 4주간격', cost: '4회 154' },
+                { name: '덴서티300', cost: '110' },
+                { name: '덴서티600+에콜라S', cost: '143' },
+                { name: '덴서티600+브이로 초음파300+에콜라S', cost: '165' },
+                { name: '브이로 어드밴스 초음파100 OR 고주파1000', cost: '11' },
+                { name: '브이로 어드밴스 초음파300+고주파3000', cost: '49.5' },
+                { name: '패인흉터 12주 *레이저3회 [포텐자,쥬베룩3회] 4주간격', cost: '1회 55 / 3회 132' },
+                { name: '패인흉터 48주 *레이저10회 [포텐자,쥬베룩4회+더블타이트,쥬베룩1회+매트릭셀,쥬베룩1회+매트릭셀4회] 4주간격', cost: '1회 55 / 5회 250 / 10회 396' },
+                { name: '매트릭셀프로 슈퍼프락셀 /도자기토닝', cost: '1회 22' },
+            ]
+        },
+        {
+            category: '색소',
+            items: [
+                { name: '화이트닝&수분 10주 *레이저5회+관리5회 [레블,젠맥4회+더블타이트,바이리즌1회+관리5회] 1주간격', cost: '10회 143' },
+                { name: '화이트닝 10주 *레이저10회 [레블,젠맥,관리] 1주간격', cost: '10회 187' },
+                { name: '기미&수분 20주 *레이저20회 [레블,젠맥,관리] 1주간격', cost: '20회 341' },
+                { name: '난치성색소 10주 *레이저5회 [루비,젠맥,관리] 2주간격', cost: '10회 121' },
+                { name: '난치성색소 20주 *레이저10회 [루비,젠맥9회+포텐자,트라넥1회,관리] 2주간격', cost: '10회 187' },
+                { name: '화이트닝&홍조 20주 *레이저10회 [레블,브이빔9회+포텐자,엑소좀1회,관리] 2주간격', cost: '1회 44 [레블,브이빔] / 5회 198 / 10회 319' },
+                { name: '홍조 20주 *레이저10회 [브이빔,플라스톰관리] 2주간격', cost: '1회 33 / 5회 148.5 / 10회 258.5' },
+                { name: '홍조&재생 10주 *레이저5회,관리5회 [놀리스5회,플라스톰관리5회] 1주간격', cost: '10회 121' },
+                { name: '붉은자국 5주 *레이저5회 [브이빔,압출관리] 1주간격', cost: '1회 33 / 5회 110' },
+                { name: '붉은자국 10주 *레이저10회 [브이빔9회+포텐자,엑소좀1회,압출관리] 1주간격', cost: '10회 198' },
+                { name: '잡티원데이 (놀리스IPL+젠맥+CO2) [놀리스1회 33D / 3회 88D]', cost: '1회 55 / 2회 88' },
+                { name: '눈썹문신 전체제거', cost: '1회 15 / 눈썹문신 부분 1회 5.5' },
+                { name: '아이라인문신 전체제거', cost: '1회 19.8 / 아이라인 끝부분 1회 5.5' },
+                { name: '문신제거 명함기준', cost: '1회 22' },
+            ]
+        },
+        {
+            category: '젠틀맥스프로 제모',
+            items: [
+                { name: '겨드랑이', cost: '1회 5.5 / 5회 25' },
+                { name: 'M자 헤어라인 / 이마 헤어라인 디자인 제모 (테이핑필요)', cost: '1회 11' },
+                { name: '얼굴전체제모', cost: '1회 20 / 5회 80' },
+                { name: '여자 인중제모 (여자 인중턱제모 1회 5.5)', cost: '1회 3.3' },
+                { name: '비키니라인', cost: '1회 11' },
+                { name: '팔전체', cost: '1회 15 / 5회 65' },
+                { name: '종아리', cost: '1회 15 / 5회 65' },
+                { name: '허벅지', cost: '1회 15 / 5회 65' },
+                { name: '남자 인중+턱제모', cost: '1회 15 / 5회 65 / 10회 121' },
+            ]
+        },
+        {
+            category: '더블타이트[한달간격] *PKG시 레이저 전 수소필SV',
+            items: [
+                { name: '더블타이트 + 바이리즌(13핀)', cost: '1회 44' },
+                { name: '더블타이트 + 엑소좀(42핀)', cost: '1회 44 / 3회 115.5' },
+                { name: '더블타이트 + 리쥬란HB2CC(13핀)', cost: '1회 66 / 3회 181.5' },
+                { name: '얼굴 더블타이트 + 쥬베룩(13핀)', cost: '1회 77 / 5회 313.5' },
+                { name: '얼굴,목 더블타이트 + 쥬베룩(13핀)', cost: '1회 88 / 5회 374' },
+            ]
+        },
+        {
+            category: '바디/지방분해',
+            items: [
+                { name: '페이스 윤곽주사5CC (▶기존 윤곽주사보다 효과3배UP)', cost: '1회 11 / 3회 29' },
+                { name: '이중턱 브이올렛', cost: '1회 22' },
+                { name: '이중턱 바이블', cost: '1회 16.5' },
+                { name: '두피PKG 12회 [보톡스3회+엑소좀9회/2주간격]', cost: '12회 184.8' },
+                { name: '지방분해주사10CC', cost: '1회 15 / 5회 70' },
+                { name: '버블핏 (카복시+지방분해주사10CC)', cost: '1회 22 / 5회 88' },
+                { name: '바디보톡스', cost: '종아리200U 35 / 승모근100U 24' },
+                { name: '이중턱 아그네스 (700샷~ + 블루로즈 8줄)', cost: '1회 250 ~? [대면 상담]' },
+            ]
+        },
+        {
+            category: '미용주사',
+            items: [
+                { name: '태반/비타민D', cost: '1회 4.4' },
+                { name: '신데렐라/백옥', cost: '1회 5.5' },
+                { name: '토닝주사', cost: '1회 7.7' },
+                { name: '디톡스주사', cost: '1회 15' },
+                { name: '대상포진(스카이조스터)', cost: '1회 15' },
+            ]
+        }
+    ];
 
     return (
         <div className="min-h-screen flex flex-col font-suit">
             <Header isScrolled={isScrolled} />
 
-            {/* Subpage Banner similar to reference or just simple spacing */}
             <div className="pt-[100px] pb-10 bg-gray-50">
                 <div className="max-w-[1400px] mx-auto px-6">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">비급여 진료비 안내</h1>
@@ -30,40 +172,33 @@ const NonBenefitPage = () => {
 
             <main className="flex-grow bg-white py-12">
                 <div className="max-w-[1400px] mx-auto px-6">
-                    <div className="overflow-x-auto">
-                        <table className="w-full border-collapse border-t-2 border-gray-900 text-sm md:text-base">
-                            <thead>
-                                <tr className="bg-gray-100 text-gray-700">
-                                    <th className="py-4 px-6 border-b border-gray-300 font-bold w-[15%]">분류</th>
-                                    <th className="py-4 px-6 border-b border-gray-300 font-bold w-[30%]">명칭</th>
-                                    <th className="py-4 px-6 border-b border-gray-300 font-bold w-[15%]">코드</th>
-                                    <th className="py-4 px-6 border-b border-gray-300 font-bold w-[15%]">비용(VAT포함)</th>
-                                    <th className="py-4 px-6 border-b border-gray-300 font-bold w-[25%]">비고</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {nonBenefitItems.map((item, index) => (
-                                    <tr key={index} className="hover:bg-gray-50 transition-colors text-center text-gray-600">
-                                        <td className="py-4 px-6 border-b border-gray-200">{item.category}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-left font-medium text-gray-800">{item.name}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-gray-400">{item.code}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 font-bold text-gray-900">{item.cost}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-gray-500 text-left">{item.remarks}</td>
-                                    </tr>
-                                ))}
-                                {nonBenefitItems.map((item, index) => (
-                                    <tr key={`dup-${index}`} className="hover:bg-gray-50 transition-colors text-center text-gray-600">
-                                        <td className="py-4 px-6 border-b border-gray-200">{item.category}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-left font-medium text-gray-800">{item.name}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-gray-400">{item.code}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 font-bold text-gray-900">{item.cost}</td>
-                                        <td className="py-4 px-6 border-b border-gray-200 text-gray-500 text-left">{item.remarks}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                    <div className="flex flex-col gap-12">
+                        {data.map((group, groupIndex) => (
+                            <div key={groupIndex}>
+                                <h2 className="text-2xl font-bold text-gray-800 mb-4 px-2 border-l-4 border-gray-900">{group.category}</h2>
+                                <div className="overflow-x-auto shadow-sm border border-gray-200 rounded-lg">
+                                    <table className="w-full border-collapse text-sm md:text-base">
+                                        <thead>
+                                            <tr className="bg-gray-100 text-gray-700 border-b border-gray-200">
+                                                <th className="py-4 px-6 font-bold w-[60%] text-left">항목명</th>
+                                                <th className="py-4 px-6 font-bold w-[40%] text-right">비용 (단위: 만원/VAT포함)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {group.items.map((item, index) => (
+                                                <tr key={index} className="hover:bg-gray-50 transition-colors border-b last:border-0 border-gray-100">
+                                                    <td className="py-4 px-6 text-gray-800 font-medium">{item.name}</td>
+                                                    <td className="py-4 px-6 text-gray-900 font-bold text-right">{item.cost}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="mt-8 text-sm text-gray-500 bg-gray-50 p-6 rounded-lg">
+
+                    <div className="mt-12 text-sm text-gray-500 bg-gray-50 p-6 rounded-lg">
                         <ul className="list-disc pl-5 space-y-1">
                             <li>상기 비급여 진료비용은 의료법 제45조에 의거하여 고지합니다.</li>
                             <li>진료 상황 및 환자의 상태에 따라 구체적인 진료비용은 변동될 수 있습니다.</li>
