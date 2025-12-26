@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -87,7 +88,7 @@ export default function Header({ isScrolled }: HeaderProps) {
       <div className="w-full relative">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex items-center justify-between py-4">
-            <a href="/" className="flex items-center cursor-pointer">
+            <Link to="/" className="flex items-center cursor-pointer">
               <img
                 src={
                   isDarkInfo
@@ -97,7 +98,7 @@ export default function Header({ isScrolled }: HeaderProps) {
                 alt="미호"
                 className="h-8"
               />
-            </a>
+            </Link>
 
             <nav className="flex items-center gap-8">
               <div className="flex items-center gap-6 text-sm">
@@ -188,12 +189,21 @@ export default function Header({ isScrolled }: HeaderProps) {
                   <ul className="flex flex-col gap-3 text-center">
                     {item.submenu.map((sub, subIndex) => (
                       <li key={subIndex}>
-                        <a
-                          href={sub.link}
-                          className="text-sm text-gray-500 hover:text-primary hover:font-medium transition-colors whitespace-nowrap cursor-pointer"
-                        >
-                          {sub.name}
-                        </a>
+                        {sub.link.startsWith('/') ? (
+                          <Link
+                            to={sub.link}
+                            className="text-sm text-gray-500 hover:text-primary hover:font-medium transition-colors whitespace-nowrap cursor-pointer"
+                          >
+                            {sub.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={sub.link}
+                            className="text-sm text-gray-500 hover:text-primary hover:font-medium transition-colors whitespace-nowrap cursor-pointer"
+                          >
+                            {sub.name}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
