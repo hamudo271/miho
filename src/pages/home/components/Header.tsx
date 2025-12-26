@@ -42,14 +42,7 @@ export default function Header({ isScrolled }: HeaderProps) {
         { name: '항노화수액', link: '#' },
       ],
     },
-    {
-      title: '커뮤니티',
-      submenu: [
-        { name: '공지사항', link: '#' },
-        { name: '미호 영상', link: '#' },
-        { name: '미호 웹드라마', link: '#' },
-      ],
-    },
+
     {
       title: '이벤트',
       submenu: [
