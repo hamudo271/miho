@@ -16,6 +16,7 @@ export default function Header({ isScrolled }: HeaderProps) {
       title: '미호뷰티그룹',
       submenu: [
         { name: '미호 소개', link: '#' },
+        { name: '비급여 진료비 안내', link: '/non-benefit' },
         { name: '학술활동', link: '#' },
         { name: '기사·언론홍보', link: '#' },
         { name: '공부하는 미호', link: '#' },
